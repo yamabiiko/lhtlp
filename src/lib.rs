@@ -19,7 +19,10 @@
 //!
 //! assert!(BigUint::from(55u32), solution);
 //! ```
-use num_primes::{Generator, RandBigInt};
+//!
+pub mod num_primes;
+
+use crate::num_primes::{Generator, RandBigInt};
 use num_bigint::BigUint;
 use num_traits::pow::Pow;
 use num_integer::Integer;

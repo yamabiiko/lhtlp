@@ -1,5 +1,16 @@
-[workspace]
-members = [
-    "lhtlp",
-    "num-primes",
-]
+[package]
+name = "lhtlp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+keywords = ["crypto, cryptography, timelock, lhtlp"]
+categories = ["cryptography"]
+description = "An implementation of Linearly Homorphic TimeLock Puzzles (LHTLP) in Rust"
+readme = "README.md"
+
+[dependencies]
+rand = "0.8.5"
+num-bigint = { version = "0.4.6", features = ["rand"] }
+num-traits = "0.2.19"
+num-integer= "0.1.46"
+log = "0.4.14"
