@@ -1,0 +1,3 @@
+[submodule "num-primes"]
+	path = num-primes
+	url = git@github.com:yamabiiko/num-primes.git
