@@ -10,7 +10,7 @@ readme = "README.md"
 
 [dependencies]
 
-num-primes = { git = "https://github.com/yamabiiko/num-primes.git", version = "*" }
+num-primes = { git = "https://github.com/yamabiiko/num-primes.git", rev = "6e80507fae25bce9075b38cd3106819fc598b142" }
 rand = "0.8.5"
 num-bigint = "0.4.6"
 num-traits = "0.2.19"
