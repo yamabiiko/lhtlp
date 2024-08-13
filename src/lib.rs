@@ -2,22 +2,27 @@
 //! This crate provides a simple library implementation of LHTLP in pure Rust.
 //! ## Setup, generate and solve a puzzle
 //! ```rust
-//! use lhltp::LHTLP;
+//! use lhtlp::LHTLP;
+//! use num_bigint::BigUint;
 //! const TIME_HARDNESS: u64 = 100000000;
 //!
 //! let lhtlp = LHTLP::setup(64, BigUint::from(TIME_HARDNESS));
 //! let secret = 42;
 //! let puzzle = lhtlp.generate(secret);
-//! let solution = lhtlp:solve(puzzle);
+//! let solution = lhtlp.solve(puzzle);
 //! ```
 //! ## Homomorphic evaluation of multiple puzzles
 //! ```rust
+//! # use lhtlp::LHTLP;
+//! # use num_bigint::BigUint;
+//! # const TIME_HARDNESS: u64 = 100000000;
+//! # let lhtlp = LHTLP::setup(64, BigUint::from(TIME_HARDNESS));
 //! let first = lhtlp.generate(42);
 //! let second = lhtlp.generate(13);
-//! let bundle = lhtlp.eval(vec![first, second]);
-//! let solution = lhtlp:solve(puzzle);
+//! let bundle = lhtlp.evaluate(vec![first, second]);
 //!
-//! assert!(BigUint::from(55u32), solution);
+//! let solution = lhtlp.solve(bundle);
+//! assert!(BigUint::from(55u32) == solution);
 //! ```
 //!
 pub mod num_primes;

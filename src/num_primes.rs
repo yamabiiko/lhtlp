@@ -30,7 +30,7 @@ const MILLER_RABIN_ROUNDS: usize = 8usize;
 /// 
 /// ```
 /// 
-/// use num_primes::{Generator,Verification};
+/// use lhtlp::num_primes::{Generator,Verification};
 /// 
 /// fn main(){
 ///     let prime = Generator::new_prime(512);
@@ -47,7 +47,7 @@ pub struct Generator;
 /// This struct is used to verify whether integers are prime, safe prime, or composite.
 /// 
 /// ```
-/// use num_primes::{Generator,Verification};
+/// use lhtlp::num_primes::{Generator,Verification};
 /// 
 /// fn main(){
 ///     let prime = Generator::new_prime(1024);
@@ -64,7 +64,7 @@ pub struct Verification;
 /// # Prime Factorization
 /// This struct is used to factor large numbers and return their largest prime factor
 /// ```
-/// use num_primes::{Generator,Factorization};
+/// use lhtlp::num_primes::{Generator,Factorization};
 /// 
 /// fn main() {
 ///     // Generates New Unsighed Integer of 64 bits
@@ -84,7 +84,7 @@ impl Generator {
     /// # Generate Large Composite Numbers
     /// This function guarantees the returned value is a composite number and is not prime.
     /// ```
-    /// use num_primes::Generator;
+    /// use lhtlp::num_primes::Generator;
     /// 
     /// fn main(){
     ///     // Generate Composite Number of 1024 bits
@@ -110,7 +110,7 @@ impl Generator {
     /// This function takes an input (n) for the number of bits the unsigned    integer should be
     /// 
     /// ```
-    /// use num_primes::Generator;
+    /// use lhtlp::num_primes::Generator;
     ///
     /// fn main() {
     ///     // Generate Large Random Unsigned Integer of 1024 bits
@@ -129,7 +129,7 @@ impl Generator {
     /// This function generates a prime number of n-bits using three primality  tests.
     /// 
     /// ```
-    /// use num_primes::Generator;
+    /// use lhtlp::num_primes::Generator;
     /// 
     /// fn main(){
     ///     // Generate Two Primes (p,q) of 512 bits
@@ -162,7 +162,7 @@ impl Generator {
     /// # Generate Safe Primes
     /// This function will generate safe prime numbers, or numbers of the form p = 2q + 1 where p is the safe prime.
     /// ```
-    /// use num_primes::Generator;
+    /// use lhtlp::num_primes::Generator;
     /// 
     /// fn main(){
     ///     // p = 2q + 1 where p is the safe prime. This generates a number of 64 bits.
@@ -211,14 +211,14 @@ impl Verification {
     /// ```
     /// use num_traits::FromPrimitive;
     /// use num_bigint::BigUint;
-    /// use num_primes::Verification;
+    /// use lhtlp::num_primes::Verification;
     /// 
     /// fn main(){
     ///     // Set BigUint To 7
     ///     let x: BigUint = BigUint::from_u64(7u64).unwrap();
     /// 
     ///     // Verify Its A Smooth Number
-    ///     let result: bool = Verification::is_smooth_number(&x,31.0,5);
+    ///     let result: bool = Verification::is_very_smooth_number(&x,31.0,5);
     /// 
     ///     println!("Is A {} Smooth Number: {}",x,result);
     /// }
@@ -235,7 +235,7 @@ impl Factorization {
     /// It returns as a `Option<BigUint>` type
     /// 
     /// ```
-    /// use num_primes::{Generator,Factorization};
+    /// use lhtlp::num_primes::{Generator,Factorization};
     /// 
     /// fn main() {
     ///     // Generates New Unsighed Integer of 32 bits
