@@ -1,0 +1,12 @@
+[package]
+name = "lhtlp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+num-primes = { git = "https://github.com/yamabiiko/num-primes.git" }
+rand = "0.8.5"
+num-bigint = "0.4.6"
+num-traits = "0.2.19"
+num-integer= "0.1.46"
