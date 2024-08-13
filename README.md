@@ -1,3 +1,6 @@
+[![Crates.io](https://img.shields.io/crates/v/lhtlp?style=flat-square)](https://crates.io/crates/lhtlp)
+![Crates.io](https://img.shields.io/crates/l/lhtlp?style=flat-square)
+
 # Linearly Homorphic TimeLock Puzzles (LHTLP) Implementation in Rust
 
 This LHTLP implementation is written purely in Rust, building on top of `num-bigint` and `num-primes` crates.
