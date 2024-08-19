@@ -1,4 +1,4 @@
-//! # lhtlp -  Linearly Homomorphic TimeLock Puzzles (LHTLP) implementation
+//! # lhtlp -  Linearly Homomorphic Time-lock Puzzles (LHTLP) implementation
 //! This crate provides a simple library implementation of LHTLP in pure Rust.
 //! ## Setup, generate and solve a puzzle
 //! ```rust
